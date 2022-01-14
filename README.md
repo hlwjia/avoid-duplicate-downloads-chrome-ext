@@ -1,0 +1,1 @@
+# avoid-duplicate-downloads-chrome-ext
