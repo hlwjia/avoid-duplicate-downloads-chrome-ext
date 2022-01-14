@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "Avoid Duplicate Downloads",
+  "description": "",
+  "version": "0.1",
+  "author": "supjohn.com",
+  "action": {
+    "default_title": "No more abc(1).pdf"
+  },
+  "permissions": [
+    "downloads"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  }
+}
