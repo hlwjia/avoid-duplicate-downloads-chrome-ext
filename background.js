@@ -11,14 +11,5 @@ chrome.action.setIcon({
 });
 
 // prompt for possible duplicate download
-chrome.downloads.onDeterminingFilename.addListener((downloadItem, suggest) => {
-  const { filename } = downloadItem;
-
-  suggest({
-    conflictAction: 'prompt',
-    filename: filename
-  });
-
-  return true;
-})
+chrome.downloads.onDeterminingFilename.addListener(({ filename }, suggest) => (suggest({conflictAction: 'prompt',filename}) || true))
 
